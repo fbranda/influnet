@@ -1,4 +1,4 @@
-"Region","number_healthcare_workers","number_cases","population","incidence","cases_0-4","inc_0-4","cases_5-14","inc_5-14","cases_15-64","inc_15-64","cases_65+","inc_65+"
+"region","number_healthcare_workers","number_cases","population","incidence","cases_0-4","inc_0-4","cases_5-14","inc_5-14","cases_15-64","inc_15-64","cases_65+","inc_65+"
 "Piedmont",20,19,26621,0.71,3,1.81,3,0.92,11,0.69,2,0.35
 "Aosta Valley",2,7,3003,2.33,0,0,1,10.87,6,2.98,0,0
 "Lombardy",124,107,177236,0.6,25,2.11,36,1.63,39,1.18,7,0.19

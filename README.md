@@ -13,20 +13,20 @@ This repository contains data extracted from the [Italian National Institute of 
 | year_week     |  String       | Bulletin reference week   |
 | number_healthcare_workers   | Integer | Number of cases reported by the healthcare workers  |
 | number_cases  | Integer | Weekly number of new confirmed cases  |
-| pop | Integer | Reference population |
+| population | Integer | Reference population |
 | incidence | Double | 1000 x number_cases/pop |
-| pop_age_0-4 | Integer | 0-4 reference population  |
-| cases_age_0-4 | Integer | 0-4 weekly new cases  |
-| incidence_age_0-4 | Double | 1000 x cases_age_0-4/pop_age_0-4  |
-| pop_age_5-14 | Integer | 5-14 reference population  |
-| cases_age_5-14 | Integer | 5-14 weekly new cases  |
-| incidence_age_5-14 | Double | 1000 x cases_age_5-14/pop_age_5-14  |
-| pop_age_15-64 | Integer | 15-64 reference population  |
-| cases_age_15-64 | Integer | 15-64 weekly new cases  |
-| incidence_age_15-64 | Double | 1000 x cases_age_15-64/pop_age_15-64  |
-| pop_age_65-plus | Integer | ≥65 reference population  |
-| cases_age_65-plus | Integer | ≥65 weekly new cases  |
-| incidence_age_65-plus | Double | 1000 x cases_age_65-plus/pop_age_65-plus  |
+| pop_0-4 | Integer | 0-4 reference population  |
+| cases_0-4 | Integer | 0-4 weekly new cases  |
+| inc_0-4 | Double | 1000 x cases_age_0-4/pop_age_0-4  |
+| pop_5-14 | Integer | 5-14 reference population  |
+| cases_5-14 | Integer | 5-14 weekly new cases  |
+| inc_5-14 | Double | 1000 x cases_age_5-14/pop_age_5-14  |
+| pop_15-64 | Integer | 15-64 reference population  |
+| cases_15-64 | Integer | 15-64 weekly new cases  |
+| inc_15-64 | Double | 1000 x cases_age_15-64/pop_age_15-64  |
+| pop_65+ | Integer | ≥65 reference population  |
+| cases_65+ | Integer | ≥65 weekly new cases  |
+| inc_65+ | Double | 1000 x cases_age_65-plus/pop_age_65-plus  |
 | number_samples | Integer | Number of clinical samples received from the laboratories  |
 | number_detections_FLU-A | Integer | Number of influenza A positive samples  |
 | number_detections_A | Integer | Number of influenza A (not subtyped) positive samples |

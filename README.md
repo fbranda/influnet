@@ -41,22 +41,22 @@ This repository contains data extracted from the [Italian National Institute of 
 
 ## Getting the data
 
-**Direct download (CSV)**: https://raw.githubusercontent.com/fbranda/INFN-ISS/main/InfluNet/flu_Italy.csv
+**Direct download (CSV)**: [https://raw.githubusercontent.com/fbranda/INFN-ISS/main/InfluNet/flu_Italy.csv](https://raw.githubusercontent.com/fbranda/influnet/main/data-aggregated/epidemiological_data/national_cases.csv)
 
 **Python** (requires `pandas`):
 ```python
 import pandas as pd
-df = pd.read_csv("https://raw.githubusercontent.com/fbranda/INFN-ISS/main/InfluNet/flu_Italy.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/fbranda/influnet/main/data-aggregated/epidemiological_data/national_cases.csv")
 ```
 
 **R** (requires `httr`):
 ```r
 library(httr)
-df <- read.csv(text=content(GET("https://raw.githubusercontent.com/fbranda/INFN-ISS/main/InfluNet/flu_Italy.csv")))
+df <- read.csv(text=content(GET("https://raw.githubusercontent.com/fbranda/influnet/main/data-aggregated/epidemiological_data/national_cases.csv")))
 ```
 
 ## Contributions
-1) Automatic report at link https://fbranda.github.io/INFN-ISS/
+1) Automatic report at link 
 
 
 ## License and attribution

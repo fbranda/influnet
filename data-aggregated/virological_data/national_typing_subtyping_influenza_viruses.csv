@@ -1,4 +1,4 @@
-"flu_season","year_week","influenza_viruses","number_samples","number_detections_influenza_viruses","...6"
+"flu_season","year_week","influenza_viruses","number_samples","number_sequenced","number_detections_influenza_viruses"
 "2012-2013","2012-46","FLU A",1,2,0
 "2012-2013","2012-46","A",1,0,0
 "2012-2013","2012-46","A(H3N2)",1,1,0

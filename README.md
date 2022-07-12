@@ -36,7 +36,7 @@ This repository contains data extracted from the [Italian National Institute of 
 | :---        |    :----:   |          ---: |
 | flu_season      | String       | Flu season reference period  |
 | year_week     |  String       | Bulletin reference week   |
-| region     |  String       | Region reference name   |
+| region     |  String       | Region name   |
 | number_healthcare_workers   | Integer | Number of cases reported by the healthcare workers  |
 | number_cases  | Integer | Weekly number of new confirmed cases  |
 | population | Integer | Reference population |
@@ -56,6 +56,14 @@ This repository contains data extracted from the [Italian National Institute of 
 
 ## Virological data schema
 
+| Column      | DataType | Description     |
+| :---        |    :----:   |          ---: |
+| flu_season      | String       | Flu season reference period  |
+| year_week     |  String       | Bulletin reference week   |
+| influenza_viruses  |  String       |  Influenza virus name  |
+| number_samples | Integer | Clinical samples received from the laboratories  |
+| number_sequenced | Integer | Number of sequenced samples |
+| number_detections_influenza_viruses | Integer | Number of detections reported of the virus |
 
 
 

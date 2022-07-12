@@ -7,6 +7,8 @@ This repository contains data extracted from the [Italian National Institute of 
 
 ## Data schema
 
+# National cases
+
 | Column      | DataType | Description     |
 | :---        |    :----:   |          ---: |
 | flu_season      | String       | Flu season reference period  |

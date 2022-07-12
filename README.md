@@ -7,7 +7,7 @@ This repository contains data extracted from the [Italian National Institute of 
 
 ## Data schema
 
-# National cases
+### National cases
 
 | Column      | DataType | Description     |
 | :---        |    :----:   |          ---: |

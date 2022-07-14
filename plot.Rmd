@@ -1,0 +1,169 @@
+---
+title: "INFN-ISS"
+
+author:
+  - Luca Cozzuto^[CRG, luca.cozzuto@crg.eu]
+
+site: bookdown::INFN-ISS
+output: bookdown::gitbook
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+---
+
+# Stagione 2012 / 2013
+
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2012 <- "InfluNet/2012-2013/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2012, "2012 / 2013", "Total samples")
+
+```
+
+# Stagione 2013 / 2014
+
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2013 <- "InfluNet/2013-2014/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2013, "2013 / 2014", "Total samples")
+
+```
+
+
+# Stagione 2014 / 2015
+
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2014 <- "InfluNet/2014-2015/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2014, "2014 / 2015", "Total samples")
+
+```
+
+
+# Stagione 2015 / 2016
+
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2015 <- "InfluNet/2015-2016/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2015, "2015 / 2016", "Total samples")
+
+```
+
+# Stagione 2016 / 2017
+
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2016 <- "InfluNet/2016-2017/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2016, "2016 / 2017", "Total samples")
+
+```
+
+
+# Stagione 2017 / 2018
+
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2017 <- "InfluNet/2017-2018/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2017, "2017 / 2018", "Total samples")
+
+```
+
+# Stagione 2018 / 2019
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2018 <- "InfluNet/2018-2019/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2018, "2018 / 2019", "Samples analyzed")
+
+
+```
+
+# Stagione 2019 / 2020
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2019 <- "InfluNet/2019-2020/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu(ita_2019, "2019 / 2020", "Samples analyzed")
+
+```
+
+# Stagione 2020 / 2021
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+
+ita_2020 <- "InfluNet/2020-2021/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+cases_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+death_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotCovid(death_web, cases_web, ita_2020, "2020 / 2021")
+
+
+```
+
+# Stagione 2021 / 2022
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+ita_2021 <- "InfluNet/2021-2022/Sorveglianza_virologica/Dati/Risultati_delle_tipizzazioni_sottotipizzazioni_dei_virus_influenzali_circolanti_in_Italia.csv"
+cases_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+death_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
+
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotCovid(death_web, cases_web, ita_2021, "2021 / 2022")
+
+
+```
+
+

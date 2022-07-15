@@ -4,6 +4,39 @@
 
 This repository contains data extracted from the [Italian National Institute of Health (ISS)](https://www.epicentro.iss.it/influenza/influnet) bulletins starting from the [2003-2004 seasonal flu](https://w3.iss.it/site/rmi/influnet/pagine/stagioni.aspx)
 
+## Repository structure
+```
+
+influnet/
+│
+├── flu-season/
+│   ├── 2003-2004
+│   │   ├── epidemiological_data
+│   │       ├── national_cases.csv
+│   │   ├── influnet_report
+│   │       ├── influnet-epi-2005-2006.pdf
+│   │ ...
+│   │
+│   │   
+│   │
+│   ├── 2012-2013
+│   │   ├── epidemiological_data
+│   │       ├── national_cases.csv
+│   │       ├── regional_cases.csv
+│   │   ├── influnet_report
+│   │       ├── influnet-epi
+│   │           ├── influnet-epi-2012-2013_1.pdf
+│   │           ...
+│   │       ├── influnet-vir
+│   │           ├── influnet-vir-2012-2013_1.pdf
+│   │           ...
+│   │   ├── virological_data 
+│   │       ├── national_typing_subtyping_influenza_viruses.csv
+...
+
+```
+
+
 
 ## Epidemiological data schema
 

@@ -8,7 +8,6 @@ This repository contains data extracted from the [Italian National Institute of 
 ```
 
 influnet/
-│
 ├── flu-season/
 │   ├── 2003-2004
 │   │   ├── epidemiological_data

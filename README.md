@@ -54,7 +54,7 @@ influnet/
 | number_healthcare_workers   | Integer | Number of cases reported by the healthcare workers  |
 | number_cases  | Integer | Weekly number of new confirmed cases  |
 | population | Integer | Reference population |
-| incidence | Double | 1000 x number_cases/pop |
+| incidence | Double | 1000 x number_cases/population |
 | pop_0-4 | Integer | 0-4 reference population  |
 | cases_0-4 | Integer | 0-4 weekly new cases  |
 | inc_0-4 | Double | 1000 x cases_age_0-4/pop_age_0-4  |

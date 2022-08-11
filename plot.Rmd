@@ -1,10 +1,10 @@
 ---
-title: "INFN-ISS"
+title: "Flu News Italy"
 
 author:
   - Luca Cozzuto^[CRG, luca.cozzuto@crg.eu]
 
-site: bookdown::INFN-ISS
+site: bookdown::InfluNet
 output: bookdown::gitbook
 documentclass: book
 biblio-style: apalike
@@ -26,7 +26,7 @@ makePlotFlu(ita_2012, "2012 / 2013", "Total samples")
 
 ```
 
-# Stagione 2013 / 2014
+# Season 2013 / 2014
 
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
@@ -42,7 +42,7 @@ makePlotFlu(ita_2013, "2013 / 2014", "Total samples")
 ```
 
 
-# Stagione 2014 / 2015
+# Season 2014 / 2015
 
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
@@ -58,7 +58,7 @@ makePlotFlu(ita_2014, "2014 / 2015", "Total samples")
 ```
 
 
-# Stagione 2015 / 2016
+# Season 2015 / 2016
 
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
@@ -73,7 +73,7 @@ makePlotFlu(ita_2015, "2015 / 2016", "Total samples")
 
 ```
 
-# Stagione 2016 / 2017
+# Season 2016 / 2017
 
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
@@ -89,7 +89,7 @@ makePlotFlu(ita_2016, "2016 / 2017", "Total samples")
 ```
 
 
-# Stagione 2017 / 2018
+# Season 2017 / 2018
 
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
@@ -104,7 +104,7 @@ makePlotFlu(ita_2017, "2017 / 2018", "Total samples")
 
 ```
 
-# Stagione 2018 / 2019
+# Season 2018 / 2019
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
 
@@ -119,7 +119,7 @@ makePlotFlu(ita_2018, "2018 / 2019", "Samples analyzed")
 
 ```
 
-# Stagione 2019 / 2020
+# Season 2019 / 2020
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
 
@@ -133,7 +133,7 @@ makePlotFlu(ita_2019, "2019 / 2020", "Samples analyzed")
 
 ```
 
-# Stagione 2020 / 2021
+# Season 2020 / 2021
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
 
@@ -150,7 +150,7 @@ makePlotCovid(death_web, cases_web, ita_2020, "2020 / 2021")
 
 ```
 
-# Stagione 2021 / 2022
+# Season 2021 / 2022
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
 

@@ -1,5 +1,5 @@
 ---
-title: "Flu and Covid in Italy"
+title: "InfluNet"
 
 author:
   - Luca Cozzuto^[CRG, luca.cozzuto@crg.eu]

@@ -1,8 +1,9 @@
 ---
-title: "Flu News Italy"
+title: "Flu and Covid in Italy"
 
 author:
   - Luca Cozzuto^[CRG, luca.cozzuto@crg.eu]
+  - Francesco Branda^[Unical, francesco.branda@unical.it]
 
 site: bookdown::InfluNet
 output: bookdown::gitbook

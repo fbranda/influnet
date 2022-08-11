@@ -1,18 +1,17 @@
 ---
-title: "INFN-ISS"
+title: "Flu News Italy"
 
 author:
   - Francesco Branda^[UniCal, francesco.brada@unical.it]
   - Luca Cozzuto^[CRG, luca.cozzuto@crg.eu]
 
 
-site: bookdown::INFN-ISS
+site: bookdown::InfluNet
 output: bookdown::gitbook
 documentclass: book
 biblio-style: apalike
 link-citations: yes
 ---
 
+The Italian Influenza Surveillance (IIS) is a web-based tool for influenza virological surveillance in Italy created by Francesco Branda and Luca Cozzuto. The tool continuously and systematically collects, compares and analyzes epidemiological and virological information of influenza to provide decision makers and public health experts in Italy with the information required to better assess influenza activity and take appropriate action.
 
-# Benvenuti
-Questo è un report automatico basato sui dati di INFN-ISS

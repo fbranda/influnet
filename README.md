@@ -124,7 +124,7 @@ df <- read.csv(text=content(GET("https://raw.githubusercontent.com/fbranda/influ
 ```
 
 ## Contributions
-1) Automatic report at link 
+1) Automatic report at link https://fbranda.github.io/influnet/
 
 
 ## License and attribution

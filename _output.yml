@@ -6,7 +6,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">INFIN-ISS</a></li>
+        <li><a href="./">Flu News Italy</a></li>
       after: |
         <li><a href="https://github.com/fbranda/influnet" target="blank">GitHub repository</a></li>
     download: ["pdf", "epub"]

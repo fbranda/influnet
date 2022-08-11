@@ -1,5 +1,5 @@
 ---
-title: "Flu News Italy"
+title: "InfluNet"
 
 author:
   - Francesco Branda^[UniCal, francesco.brada@unical.it]

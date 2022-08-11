@@ -1,5 +1,5 @@
 theme: jekyll-theme-dinky
-title: INFN-ISS
+title: Flu News Italy
 markdown: kramdown
 kramdown:
   parse_block_html: true

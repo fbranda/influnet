@@ -2,6 +2,7 @@ library(dplyr)
 library(reshape)
 library(stringr)
 library("ggplot2")
+library(forcats)
 
 
 getPartDataFromJH <- function(link, us=FALSE) {
@@ -83,83 +84,62 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title) {
 	
 	data_web<-getDataFromJH(death_web, cases_web)
 	cases_ita<-getSingleCountryData(data_web, "Italy", "JH")
+    cases_ita$year_week<-strftime(cases_ita$date, format = "%Y-%V")
 
-	merge.df<-merge(virol.agg.df, cases_ita, by.y = "date", by.x = "date")
+	cases_ita.agg<-cases_ita %>%
+		  group_by(year_week) %>%
+		  summarise(cases = round(mean(cases)), 
+			   deaths = round(mean(deaths)))
 
+	merge.df<-merge(virol.agg.df, cases_ita.agg, by.y = "year_week", by.x = "year_week")
 
-	pl1 <- ggplot(merge.df, aes(x=date, y=Total_Samples*100)) +
-		  geom_bar(stat = "unique", width=4, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
+	pl1 <- ggplot(merge.df, aes(x=fct_inorder(week), y=Total_Samples*100)) +
+		  geom_bar(stat = "unique", width=1, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
 		  geom_line(aes(y = Positives*100, group = group_vir, color=group_vir)) +
-
-		  scale_color_manual(values=c("black", "#D48E88","#66B8BC")) + 
-		  geom_line(aes(y = cases), color="blue") +
-			scale_y_continuous(
+		  scale_color_manual(values=c("#D48E88","#66B8BC", "black")) + 
+		  
+		  geom_line(aes(y=cases), color="blue", group=1) +
+		  scale_y_continuous(
 				"Prevalence Covid", 
 				sec.axis = sec_axis(~ . * 0.01, name = "INFN-ISS cases")
 			) +
 		  theme_classic() +  
 		  ggtitle(title) +   theme(plot.title = element_text(hjust = 0.5)) +  
-		  theme(axis.title.y.left =element_text(colour="blue"))
+		  theme(axis.title.y.left =element_text(colour="blue")) +
+ 		  xlab("week of the year") 
 
 	return(pl1)
 }
 
 
-
-
-
-
 reshapeData<-function(ita_web) {
 
-	virol<-read.csv(ita_web, sep=";")
-	virol$group_vir <- ifelse(virol$"Virus" == "Positivi al SARS-CoV-2", 'Covid', 
-		ifelse(virol$"Virus" == "FLU A", 'Flu A',
-		ifelse(virol$"Virus" == "FLU B", 'Flu B',
+	virol<-read.csv(ita_web, sep=",")
+	virol$group_vir <- ifelse(virol$"influenza_viruses" == "SARS-CoV-2", 'SARS CoV 2', 
+		ifelse(virol$"influenza_viruses" == "FLU A", 'Flu A',
+		ifelse(virol$"influenza_viruses" == "FLU B", 'Flu B',
 	"other")))
 
 	virol.2<-virol[-grep("other", virol$group_vir), ]
 
-	if (dim(virol.2)[2] == 6) {
+	if (dim(virol.2)[2] == 5) {
 		virol.agg<-virol.2 %>%
-		  group_by(Settimana, group_vir) %>%
-		  summarise(Positives = sum(N.), 
-			   Total_Samples = mean(N..campioni))
+		  group_by(year_week, group_vir) %>%
+		  summarise(Positives = sum(number_detections_influenza_viruses), 
+			   Total_Samples = mean(number_samples))
 	} else {
 		virol.agg<-virol.2 %>%
-		  group_by(Settimana, group_vir) %>%
-		  summarise(Positives = sum(N.), 	
-		  Total_Samples = mean(N..campioni.analizzati))
-		  	
+		  group_by(year_week, group_vir) %>%
+		  summarise(Positives = sum(number_detections_influenza_viruses), 	
+		  Total_Samples = mean(number_sequenced))	  	
 	}
 	
 	virol.agg.df<-as.data.frame(virol.agg)
 
-	raw_date<-as.data.frame(str_split(virol.agg.df$Settimana, " ", simplify = TRUE))
+	raw_date<-as.data.frame(str_split(virol.agg.df$year_week, "-", simplify = TRUE))
 
-	if ( dim(raw_date)[2] == 5) { 
-		raw_date$year <- ifelse(raw_date$"V5" != "", raw_date$"V3", 
-						ifelse(raw_date$"V4" != "", raw_date$"V4",
-						raw_date$"V3")
-		)
-		raw_date$V5<-NULL
-	} else if (dim(raw_date)[2] == 4) {
-		raw_date$year <-ifelse(raw_date$"V4" != "", raw_date$"V4",
-						raw_date$"V3")
+	virol.agg.df$week<-as.character(raw_date$V2)
 	
-	}
-	raw_date$V3<-NULL
-	raw_date$V4<-NULL
-
-	good_dates<-data.frame("day" = gsub("-.*","", raw_date$V1), "month" = gsub("-.*","", raw_date$V2), "year" = raw_date$year)
-
-	good_dates2<-good_dates %>% mutate("month" = recode(good_dates$"month", 'gennaio' = '1', 'febbraio' = '2', 'marzo' = '3',
-	'aprile' = '4', 'maggio' = '5', 'giugno' = '6',
-	'luglio' = '7', 'agosto' = '8', 'settembre' = '9',
-	'ottobre' = '10', 'novembre' = '11', 'dicembre' = '12' 
-	))
-
-	virol.agg.df$date<-as.Date(paste(good_dates2$month, good_dates2$day, good_dates2$year, sep="-"), format="%m-%d-%Y")
-
 	return(virol.agg.df)
 }
 
@@ -167,11 +147,11 @@ reshapeData<-function(ita_web) {
 makePlotFlu<-function(ita_web, title, yaxis) {
 	virol.agg.df<-reshapeData(ita_web)
 
-	pl1 <- ggplot(virol.agg.df, aes(x=date, y=Total_Samples)) + 
+	pl1 <- ggplot(virol.agg.df, aes(x=fct_inorder(week), y=Total_Samples)) + 
 	      ylab(yaxis) +
-		  geom_bar(stat = "unique", width=4, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
-		  geom_bar(stat = "unique", width=4, alpha=0.7, aes(y = Positives, fill = group_vir, group = group_vir, colour=group_vir)) +
- 
+		  geom_bar(stat = "unique", width=1, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
+		  geom_bar(stat = "unique", width=1, alpha=0.7, aes(y = Positives, fill = group_vir, group = group_vir, colour=group_vir)) +
+ 		  xlab("week of the year") +
 		  theme_classic() +  
 		  ggtitle(title) +   theme(plot.title = element_text(hjust = 0.5)) 
 	return(pl1)

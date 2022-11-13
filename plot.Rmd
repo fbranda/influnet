@@ -163,9 +163,9 @@ death_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/c
 source("functions.R", local = knitr::knit_global())
 
 makePlotCovid(death_web, cases_web, ita_2021, "2021 / 2022")
+```
 
-
-# Season 2021 / 2022
+# Season 2022 / 2023
 
 Coming soon
 

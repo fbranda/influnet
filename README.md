@@ -128,6 +128,7 @@ df <- read.csv(text=content(GET("https://raw.githubusercontent.com/fbranda/influ
 
 ## Contributions
 1) Automatic report at link https://fbranda.github.io/influnet/
+2) Automatic bot at link https://mastodon.uno/@influbot@sociale.network
 
 
 ## License and attribution

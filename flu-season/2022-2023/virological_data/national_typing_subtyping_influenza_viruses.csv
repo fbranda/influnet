@@ -1,0 +1,13 @@
+year_week;influenza_viruses;number_samples;number_sequenced;number_detections_influenza_viruses
+2022-46;FLU A;562;494;182
+2022-46;A;562;494;18
+2022-46;A(H3N2);562;494;154
+2022-46;A(H1N1)pdm2009;562;494;10
+2022-46;FLU B;562;494;0
+2022-46;SARS-CoV-2;562;494;24
+2022-46;Rhinovirus ;562;494;35
+2022-46;RSV;562;494;32
+2022-46;Parainfluenzali ;562;494;10
+2022-46;Adenovirus ;562;494;8
+2022-46;Coronavirus!=SARS-CoV-2;562;494;4
+2022-46;Bocavirus ;562;494;2

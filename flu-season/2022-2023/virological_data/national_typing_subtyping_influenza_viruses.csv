@@ -9,7 +9,7 @@
 "2022-46","RSV",656,494,32
 "2022-46","Parainfluenzali",656,494,10
 "2022-46","Adenovirus",656,494,8
-"2022-46","Coronavirus!=SARS-CoV-2",656,494,4
+"2022-46","Generic coronavirus",656,494,4
 "2022-46","Bocavirus",656,494,2
 "2022-47","FLU A",855,717,274
 "2022-47","A",855,717,40
@@ -21,6 +21,6 @@
 "2022-47","RSV",855,717,63
 "2022-47","Parainfluenzali",855,717,11
 "2022-47","Adenovirus",855,717,6
-"2022-47","Coronavirus!=SARS-CoV-2",855,717,8
+"2022-47","Generic coronavirus",855,717,8
 "2022-47","Bocavirus",855,717,NA
 "2022-47","Metapneumovirus",855,717,2

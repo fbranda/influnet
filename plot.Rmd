@@ -146,8 +146,7 @@ death_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/c
 
 source("functions.R", local = knitr::knit_global())
 
-makePlotCovid(death_web, cases_web, ita_2020, "2020 / 2021")
-
+makePlotCovid(death_web, cases_web, ita_2020, "2020 / 2021", pal1)
 
 ```
 
@@ -162,7 +161,7 @@ death_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/c
 
 source("functions.R", local = knitr::knit_global())
 
-makePlotCovid(death_web, cases_web, ita_2021, "2021 / 2022")
+makePlotCovid(death_web, cases_web, ita_2021, "2021 / 2022", pal1)
 ```
 
 # Season 2022 / 2023
@@ -176,7 +175,7 @@ death_web <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/c
 
 source("functions.R", local = knitr::knit_global())
 
-makePlotCovid(death_web, cases_web, ita_2022, "2022 / 2023")
+makePlotCovid(death_web, cases_web, ita_2022, "2022 / 2023", pal2)
 ```
 
 

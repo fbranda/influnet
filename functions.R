@@ -4,6 +4,8 @@ library(stringr)
 library("ggplot2")
 library(forcats)
 
+pal1<-c("#D48E88","#66B8BC", "black", "gray")
+pal2<-c("#D48E88","#66B8BC", "red", "green", "yellow", "black", "gray")
 
 getPartDataFromJH <- function(link, us=FALSE) {
 
@@ -78,7 +80,7 @@ getDataFromJH<-function(death_web, cases_web, single=FALSE){
 }
 
 
-makePlotCovid <- function(death_web, cases_web, ita_web, title) {
+makePlotCovid <- function(death_web, cases_web, ita_web, title, mypalette) {
 
 	virol.agg.df<-reshapeData(ita_web)
 	
@@ -96,7 +98,7 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title) {
 	pl1 <- ggplot(merge.df, aes(x=fct_inorder(week), y=Total_Samples*100)) +
 		  geom_bar(stat = "unique", width=1, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
 		  geom_line(aes(y = Positives*100, group = group_vir, color=group_vir)) +
-		  scale_color_manual(values=c("#D48E88","#66B8BC", "black")) + 
+		  scale_color_manual(values=mypalette) + 
 		  
 		  geom_line(aes(y=cases), color="blue", group=1) +
 		  scale_y_continuous(
@@ -111,17 +113,21 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title) {
 	return(pl1)
 }
 
-
 reshapeData<-function(ita_web) {
 
 	virol<-read.csv(ita_web, sep=",")
+	virol[is.na(virol)] <- 0
 	virol$group_vir <- ifelse(virol$"influenza_viruses" == "SARS-CoV-2", 'SARS CoV 2', 
 		ifelse(virol$"influenza_viruses" == "FLU A", 'Flu A',
 		ifelse(virol$"influenza_viruses" == "FLU B", 'Flu B',
-	"other")))
+		ifelse(virol$"influenza_viruses" == "Rhinovirus", 'Rhinovirus',
+		ifelse(virol$"influenza_viruses" == "Adenovirus", 'Adenovirus',
+		ifelse(virol$"influenza_viruses" == "RSV", 'RSV',
+	"other"))))))
 
-	virol.2<-virol[-grep("other", virol$group_vir), ]
-
+	#virol.2<-virol[-grep("other", virol$group_vir), ]
+    virol.2<-virol
+    
 	if (dim(virol.2)[2] == 5) {
 		virol.agg<-virol.2 %>%
 		  group_by(year_week, group_vir) %>%

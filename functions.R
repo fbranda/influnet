@@ -102,7 +102,7 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title, mypalette) {
 		  
 		  geom_line(aes(y=cases), color="blue", group=1) +
 		  scale_y_continuous(
-				"Prevalence Covid", 
+				"Incidence Covid", 
 				sec.axis = sec_axis(~ . * 0.01, name = "INFN-ISS cases")
 			) +
 		  theme_classic() +  

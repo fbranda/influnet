@@ -123,10 +123,13 @@ reshapeData<-function(ita_web) {
 		ifelse(virol$"influenza_viruses" == "Rhinovirus", 'Rhinovirus',
 		ifelse(virol$"influenza_viruses" == "Adenovirus", 'Adenovirus',
 		ifelse(virol$"influenza_viruses" == "RSV", 'RSV',
-	"other"))))))
+		ifelse(virol$"influenza_viruses" == "Generic coronavirus", 'other',
+		ifelse(virol$"influenza_viruses" == "Bocavirus", 'other',
+		ifelse(virol$"influenza_viruses" == "Metapneumovirus", 'other',
+		ifelse(virol$"influenza_viruses" == "Parainfluenzali", 'other',	
+	"remove"))))))))))
 
-	#virol.2<-virol[-grep("other", virol$group_vir), ]
-    virol.2<-virol
+	virol.2<-virol[-grep("remove", virol$group_vir), ]
     
 	if (dim(virol.2)[2] == 5) {
 		virol.agg<-virol.2 %>%

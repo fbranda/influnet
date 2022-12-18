@@ -189,7 +189,7 @@ getFluHistoricalData<-function(path) {
 	return(counts.files2)
 }
 
-makePlotFluHistory<-function(histdata, flutype, colorPast, colorNow) {
+makePlotFluHistory<-function(counts.files2, flutype, colorPast, colorNow) {
 
 	last_season = max(unique(counts.files2$season))
 
@@ -198,8 +198,8 @@ makePlotFluHistory<-function(histdata, flutype, colorPast, colorNow) {
 
 
 	pl1<-ggplot(data=flu, aes(x=fct_inorder(week), y=number_detections_influenza_viruses)) + 
- 		  geom_line(data = flua, aes(group=season), color=colorPast) +
- 		  geom_line(data = subset(flua, season==last_season), color = colorNow, aes(group=season)) +
+ 		  geom_line(data = flu, aes(group=season), color=colorPast) +
+ 		  geom_line(data = subset(flu, season==last_season), color = colorNow, aes(group=season)) +
  		  xlab("Week of the year") +
  		  ylab("Positive cases") +
 		  theme_classic() +

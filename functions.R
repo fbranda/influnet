@@ -167,3 +167,43 @@ makePlotFlu<-function(ita_web, title, yaxis) {
 	return(pl1)
 
 }
+
+
+getFluHistoricalData<-function(path) {
+	ff <- list.files( path = path, recursive=T, pattern = "*national_typing_subtyping_influenza_viruses.csv$", full.names = TRUE )
+	counts.files <- lapply( ff, read.csv)
+
+	counts.files2 = data.frame()
+	i=0
+	for (counts.file in counts.files) {
+		i = i+1
+		df = counts.file[,!names(counts.file) %in% c("number_sequenced")]
+		df$season = i
+		counts.files2 = rbind(counts.files2, df)
+	}
+
+	raw_date<-as.data.frame(str_split(counts.files2$year_week, "-", simplify = TRUE))
+	counts.files2$week<-raw_date$V2
+	counts.files2$year<-raw_date$V1
+	counts.files2$season_year<-paste(counts.files2$year, as.numeric(counts.files2$year)+1, sep="-")
+	return(counts.files2)
+}
+
+makePlotFluHistory<-function(histdata, flutype, colorPast, colorNow) {
+
+	last_season = max(unique(counts.files2$season))
+
+	flu<-counts.files2[grep(flutype, counts.files2$influenza_viruses), ]
+	flu$year_week<-NULL
+
+
+	pl1<-ggplot(data=flu, aes(x=fct_inorder(week), y=number_detections_influenza_viruses)) + 
+ 		  geom_line(data = flua, aes(group=season), color=colorPast) +
+ 		  geom_line(data = subset(flua, season==last_season), color = colorNow, aes(group=season)) +
+ 		  xlab("Week of the year") +
+ 		  ylab("Positive cases") +
+		  theme_classic() +
+		  ggtitle(flutype) +   theme(plot.title = element_text(hjust = 0.5)) 
+	return(pl1)
+}
+

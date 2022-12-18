@@ -95,11 +95,11 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title, mypalette) {
 
 	merge.df<-merge(virol.agg.df, cases_ita.agg, by.y = "year_week", by.x = "year_week")
 
-	pl1 <- ggplot(merge.df, aes(x=fct_inorder(week), y=Total_Samples*100)) +
+	myweek<-c("46","47","48","49","50","51","52","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17")
+	pl1 <- ggplot(merge.df, aes(x=fct_inorder(factor(week)), y=Total_Samples*100)) +
 		  geom_bar(stat = "unique", width=1, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
 		  geom_line(aes(y = Positives*100, group = group_vir, color=group_vir)) +
 		  scale_color_manual(values=mypalette) + 
-		  
 		  geom_line(aes(y=cases), color="blue", group=1) +
 		  scale_y_continuous(
 				"Incidence Covid", 
@@ -108,7 +108,8 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title, mypalette) {
 		  theme_classic() +  
 		  ggtitle(title) +   theme(plot.title = element_text(hjust = 0.5)) +  
 		  theme(axis.title.y.left =element_text(colour="blue")) +
- 		  xlab("week of the year") 
+ 		  xlab("week of the year") +
+ 		  scale_x_discrete(limits=factor(myweek))
 
 	return(pl1)
 }

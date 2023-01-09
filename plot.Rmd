@@ -178,6 +178,16 @@ source("functions.R", local = knitr::knit_global())
 makePlotCovid(death_web, cases_web, ita_2022, "2022 / 2023", pal2)
 ```
 
+# Influenza like illness 
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+path<-"flu-season/"
+
+histILIdata<-getILIHistoricalData(path)
+makePlotIliHistory(histILIdata)
+
+```
+
 # Comparison Flu A
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}

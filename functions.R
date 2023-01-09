@@ -208,3 +208,44 @@ makePlotFluHistory<-function(counts.files2, flutype, colorPast, colorNow) {
 	return(pl1)
 }
 
+path<-"flu-season/"
+
+getIliHistoricalData<-function(path) {
+	ff <- list.files( path = path, recursive=T, pattern = "*national_cases.csv$", full.names = TRUE )
+	counts.files <- lapply( ff, read.csv)
+
+	counts.files2 = data.frame()
+	i=0
+	for (counts.file in counts.files) {
+		i = i+1
+		df = counts.file
+		df$season = i
+		counts.files2 = rbind(counts.files2, df)
+	}
+
+	raw_date<-as.data.frame(str_split(counts.files2$year_week, "-", simplify = TRUE))
+	counts.files2$week<-raw_date$V2
+	counts.files2$year<-raw_date$V1
+	counts.files2$season_year<-paste(counts.files2$year, as.numeric(counts.files2$year)+1, sep="-")
+	return(counts.files2)
+}
+
+
+
+
+makePlotIliHistory<-function(counts.files2) {
+
+	last_season = max(unique(counts.files2$season))
+
+	flu<-counts.files2
+	flu$year_week<-NULL
+
+	pl1<-ggplot(data=flu, aes(x=fct_inorder(week), y=incidence)) + 
+ 		  geom_line(data = flu, aes(group=season), color="gray") +
+ 		  geom_line(data = subset(flu, season==last_season), aes(group=season)) +
+ 		  xlab("Week of the year") +
+ 		  ylab("Incidence") +
+		  theme_classic() +
+		  ggtitle("Influenza like illness") +   theme(plot.title = element_text(hjust = 0.5))
+	return(pl1)
+}

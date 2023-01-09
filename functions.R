@@ -208,8 +208,6 @@ makePlotFluHistory<-function(counts.files2, flutype, colorPast, colorNow) {
 	return(pl1)
 }
 
-path<-"flu-season/"
-
 getIliHistoricalData<-function(path) {
 	ff <- list.files( path = path, recursive=T, pattern = "*national_cases.csv$", full.names = TRUE )
 	counts.files <- lapply( ff, read.csv)

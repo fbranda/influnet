@@ -183,7 +183,7 @@ makePlotCovid(death_web, cases_web, ita_2022, "2022 / 2023", pal2)
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
 path<-"flu-season/"
 
-histILIdata<-getILIHistoricalData(path)
+histILIdata<-getIliHistoricalData(path)
 makePlotIliHistory(histILIdata)
 
 ```

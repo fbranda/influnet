@@ -11,5 +11,6 @@ season-2020-2021
 season-2021-2022
 season-2022-2023
 influenza-like-illness
+cumulative-incidence
 comparison-flu-a
 comparison-flu-b

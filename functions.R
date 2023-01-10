@@ -3,6 +3,7 @@ library(reshape)
 library(stringr)
 library("ggplot2")
 library(forcats)
+library("data.table")
 
 pal1<-c("#D48E88","#66B8BC", "black", "gray")
 #pal2<-c("#D48E88","red", "#66B8BC", "green", "yellow", "black", "gray")
@@ -197,8 +198,8 @@ makePlotFluHistory<-function(counts.files2, flutype, colorPast, colorNow) {
 	flu<-counts.files2[grep(flutype, counts.files2$influenza_viruses), ]
 	flu$year_week<-NULL
 
-
-	pl1<-ggplot(data=flu, aes(x=fct_inorder(week), y=number_detections_influenza_viruses)) + 
+    level_order=c("41","42","43","44","45","46","47","48","49","50","51","52","53","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17")
+	pl1<-ggplot(data=flu, aes(x=factor(week, level = level_order), y=number_detections_influenza_viruses)) +
  		  geom_line(data = flu, aes(group=season), color=colorPast) +
  		  geom_line(data = subset(flu, season==last_season), color = colorNow, aes(group=season)) +
  		  xlab("Week of the year") +
@@ -217,7 +218,7 @@ getIliHistoricalData<-function(path) {
 	for (counts.file in counts.files) {
 		i = i+1
 		df = counts.file
-		df$season = i
+		df$season = i		
 		counts.files2 = rbind(counts.files2, df)
 	}
 
@@ -230,7 +231,6 @@ getIliHistoricalData<-function(path) {
 
 
 
-
 makePlotIliHistory<-function(counts.files2) {
 
 	last_season = max(unique(counts.files2$season))
@@ -238,11 +238,33 @@ makePlotIliHistory<-function(counts.files2) {
 	flu<-counts.files2
 	flu$year_week<-NULL
 
-	pl1<-ggplot(data=flu, aes(x=fct_inorder(week), y=incidence)) + 
+    level_order=c("41","42","43","44","45","46","47","48","49","50","51","52","53","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17")
+	pl1<-ggplot(data=flu, aes(x=factor(week, level = level_order), y=incidence)) +
  		  geom_line(data = flu, aes(group=season), color="gray") +
  		  geom_line(data = subset(flu, season==last_season), aes(group=season)) +
  		  xlab("Week of the year") +
  		  ylab("Incidence") +
+		  theme_classic() +
+		  ggtitle("Influenza like illness") +   theme(plot.title = element_text(hjust = 0.5))
+	return(pl1)
+}
+
+makePlotIliCumHistory<-function(counts.files2) {
+
+	last_season = max(unique(counts.files2$season))
+
+	flu<-counts.files2
+	flu$year_week<-NULL
+    flu_slim<-data.frame(season=flu$season,week=flu$week,incidence=flu$incidence)
+	DT <- data.table(flu_slim)
+	DT[, Cum.Sum := cumsum(incidence), by=list(season)]
+	DT$week<-as.factor(DT$week)
+    level_order=c("41","42","43","44","45","46","47","48","49","50","51","52","53","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17")
+	pl1<-ggplot(data=DT, aes(x=factor(week, level = level_order), y=Cum.Sum)) +
+ 		  geom_line(data = DT, aes(group=season), color="gray", na.rm = TRUE) +
+ 		  geom_line(data = subset(DT, season==last_season), aes(group=season), na.rm = TRUE) +
+ 		  xlab("Week of the year") +
+ 		  ylab("Cumulative incidence") +
 		  theme_classic() +
 		  ggtitle("Influenza like illness") +   theme(plot.title = element_text(hjust = 0.5))
 	return(pl1)

@@ -3,7 +3,6 @@ library(reshape)
 library(stringr)
 library("ggplot2")
 library(forcats)
-library("data.table")
 
 pal1<-c("#D48E88","#66B8BC", "black", "gray")
 #pal2<-c("#D48E88","red", "#66B8BC", "green", "yellow", "black", "gray")
@@ -250,6 +249,7 @@ makePlotIliHistory<-function(counts.files2) {
 }
 
 makePlotIliCumHistory<-function(counts.files2) {
+	library("data.table")
 
 	last_season = max(unique(counts.files2$season))
 

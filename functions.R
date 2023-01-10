@@ -3,6 +3,7 @@ library(reshape)
 library(stringr)
 library("ggplot2")
 library(forcats)
+library("data.table")
 
 pal1<-c("#D48E88","#66B8BC", "black", "gray")
 #pal2<-c("#D48E88","red", "#66B8BC", "green", "yellow", "black", "gray")
@@ -31,7 +32,7 @@ getPartDataFromJH <- function(link, us=FALSE) {
 	data_raw.agg.df<-as.data.frame(data_raw.agg)
 	data_raw.agg.df$country<-data_raw.agg.df$Country.Region
 	data_raw.agg.df$Country.Region<-NULL	
-	mdata<-melt(data_raw.agg.df, id=c("country"))
+	mdata<-reshape::melt(data_raw.agg.df, id=c("country"))
 	mdata$variable<-as.Date(str_replace_all(str_replace(mdata$variable, "X", ""), '\\.', "-"), format="%m-%d-%y")
 	return(mdata)
 }
@@ -249,7 +250,6 @@ makePlotIliHistory<-function(counts.files2) {
 }
 
 makePlotIliCumHistory<-function(counts.files2) {
-	library("data.table")
 
 	last_season = max(unique(counts.files2$season))
 

@@ -4,6 +4,7 @@ library(stringr)
 library("ggplot2")
 library(forcats)
 library("data.table")
+library(cowplot)
 
 pal1<-c("#D48E88","#66B8BC", "black", "gray")
 #pal2<-c("#D48E88","red", "#66B8BC", "green", "yellow", "black", "gray")
@@ -254,18 +255,45 @@ makePlotIliCumHistory<-function(counts.files2) {
 	last_season = max(unique(counts.files2$season))
 
 	flu<-counts.files2
-	flu$year_week<-NULL
+	#flu$year_week<-NULL
     flu_slim<-data.frame(season=flu$season,week=flu$week,incidence=flu$incidence)
+	flu_slim2<-data.frame(season=flu$season,week=flu$week,incidence=flu$incidence, year=flu$year)
+	flu_slim2$season_year <- ifelse(as.numeric(flu_slim2$week)>30, paste(flu_slim2$year, as.numeric(flu_slim2$year)+1, sep="-"), 
+		paste(as.numeric(flu_slim2$year)-1, as.numeric(flu_slim2$year), sep="-")
+	)
+
+	flu_slim2$year<-NULL
+	flu_slim2$week<-NULL
+	
 	DT <- data.table(flu_slim)
+	
+	DT2<-aggregate(x = flu_slim2$incidence,             # Sum by group
+          by = list(flu_slim2$season_year),
+          FUN = sum)
+          
+ 	names(DT2)<-c("season", "incidence")
+           	
 	DT[, Cum.Sum := cumsum(incidence), by=list(season)]
 	DT$week<-as.factor(DT$week)
     level_order=c("41","42","43","44","45","46","47","48","49","50","51","52","53","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17")
+
 	pl1<-ggplot(data=DT, aes(x=factor(week, level = level_order), y=Cum.Sum)) +
  		  geom_line(data = DT, aes(group=season), color="gray", na.rm = TRUE) +
  		  geom_line(data = subset(DT, season==last_season), aes(group=season), na.rm = TRUE) +
  		  xlab("Week of the year") +
  		  ylab("Cumulative incidence") +
-		  theme_classic() +
-		  ggtitle("Influenza like illness") +   theme(plot.title = element_text(hjust = 0.5))
-	return(pl1)
+		  theme_classic() 
+	#	  ggtitle("Influenza like illness") +   theme(plot.title = element_text(hjust = 0.5))
+
+	pl2<-ggplot(data=DT2, aes(x=season, y=incidence)) +
+  		geom_bar(stat="identity") + coord_flip() +
+		  xlab("Season") +
+ 		  ylab("Cumulative incidence") +
+		  theme_classic() 
+	#+ ggtitle("Influenza like illness") +   theme(plot.title = element_text(hjust = 0.5))
+
+	pl3<-plot_grid(pl1, pl2, labels = "AUTO", ncol = 1, align = 'v')
+
+
+	return(pl3)
 }

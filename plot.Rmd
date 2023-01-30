@@ -192,7 +192,7 @@ makePlotIliHistory(histILIdata)
 
 # Cumulative incidence
 
-```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7, fig.height=10}
 source("functions.R", local = knitr::knit_global())
 
 path<-"flu-season/"

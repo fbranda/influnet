@@ -6,6 +6,7 @@ This repository contains data extracted from the [Italian National Institute of 
 
 #### Data notes
 * **2022-12-30**: Update December 30, 2022 bulletin (`influnet-epi-2022-2023_9.pdf`) contains a probable error regarding incidence in the 0-4 age group in Aosta Valley: 179.19 --> 17.92 
+*IMPORTANT* - As of Jan. 21st, data can be downloaded directly from [the official portal for European data](https://data.europa.eu/data/datasets/influenza-stagionale?locale=it)
 
 
 

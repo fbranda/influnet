@@ -7,6 +7,8 @@ This repository contains data extracted from the [Italian National Institute of 
 *IMPORTANT* - As of Jan. 21st, data can be downloaded directly from [the official portal for European data](https://data.europa.eu/data/datasets/influenza-stagionale?locale=it)
 
 
+*DATA UPDATE* -  As of Feb. 12th, national and regional vaccination rates by age group are available for each flu season.
+
 
 
 

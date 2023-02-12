@@ -1,0 +1,199 @@
+"Region","Age","Vaccination coverage"
+"Piedmont","6-23m",NA
+"Aosta Valley","6-23m",NA
+"Lombardy","6-23m",NA
+"AP Bolzano","6-23m",NA
+"AP Trento","6-23m",NA
+"Veneto","6-23m",NA
+"Friuli-Venezia Giulia","6-23m",NA
+"Liguria","6-23m",NA
+"Emilia-Romagna","6-23m",NA
+"Tuscany","6-23m",NA
+"Umbria","6-23m",NA
+"Marche","6-23m",NA
+"Lazio","6-23m",NA
+"Abruzzo","6-23m",NA
+"Molise","6-23m",NA
+"Campania","6-23m",NA
+"Apulia","6-23m",NA
+"Basilicata","6-23m",NA
+"Calabria","6-23m",NA
+"Sicily","6-23m",NA
+"Sardinia","6-23m",NA
+"Italy","6-23m",NA
+"Piedmont","2-4y",NA
+"Aosta Valley","2-4y",NA
+"Lombardy","2-4y",NA
+"AP Bolzano","2-4y",NA
+"AP Trento","2-4y",NA
+"Veneto","2-4y",NA
+"Friuli-Venezia Giulia","2-4y",NA
+"Liguria","2-4y",NA
+"Emilia-Romagna","2-4y",NA
+"Tuscany","2-4y",NA
+"Umbria","2-4y",NA
+"Marche","2-4y",NA
+"Lazio","2-4y",NA
+"Abruzzo","2-4y",NA
+"Molise","2-4y",NA
+"Campania","2-4y",NA
+"Apulia","2-4y",NA
+"Basilicata","2-4y",NA
+"Calabria","2-4y",NA
+"Sicily","2-4y",NA
+"Sardinia","2-4y",NA
+"Italy","2-4y",NA
+"Piedmont","5_8",NA
+"Aosta Valley","5_8",NA
+"Lombardy","5_8",NA
+"AP Bolzano","5_8",NA
+"AP Trento","5_8",NA
+"Veneto","5_8",NA
+"Friuli-Venezia Giulia","5_8",NA
+"Liguria","5_8",NA
+"Emilia-Romagna","5_8",NA
+"Tuscany","5_8",NA
+"Umbria","5_8",NA
+"Marche","5_8",NA
+"Lazio","5_8",NA
+"Abruzzo","5_8",NA
+"Molise","5_8",NA
+"Campania","5_8",NA
+"Apulia","5_8",NA
+"Basilicata","5_8",NA
+"Calabria","5_8",NA
+"Sicily","5_8",NA
+"Sardinia","5_8",NA
+"Italy","5_8",NA
+"Piedmont","9_14",NA
+"Aosta Valley","9_14",NA
+"Lombardy","9_14",NA
+"AP Bolzano","9_14",NA
+"AP Trento","9_14",NA
+"Veneto","9_14",NA
+"Friuli-Venezia Giulia","9_14",NA
+"Liguria","9_14",NA
+"Emilia-Romagna","9_14",NA
+"Tuscany","9_14",NA
+"Umbria","9_14",NA
+"Marche","9_14",NA
+"Lazio","9_14",NA
+"Abruzzo","9_14",NA
+"Molise","9_14",NA
+"Campania","9_14",NA
+"Apulia","9_14",NA
+"Basilicata","9_14",NA
+"Calabria","9_14",NA
+"Sicily","9_14",NA
+"Sardinia","9_14",NA
+"Italy","9_14",NA
+"Piedmont","15_17",NA
+"Aosta Valley","15_17",NA
+"Lombardy","15_17",NA
+"AP Bolzano","15_17",NA
+"AP Trento","15_17",NA
+"Veneto","15_17",NA
+"Friuli-Venezia Giulia","15_17",NA
+"Liguria","15_17",NA
+"Emilia-Romagna","15_17",NA
+"Tuscany","15_17",NA
+"Umbria","15_17",NA
+"Marche","15_17",NA
+"Lazio","15_17",NA
+"Abruzzo","15_17",NA
+"Molise","15_17",NA
+"Campania","15_17",NA
+"Apulia","15_17",NA
+"Basilicata","15_17",NA
+"Calabria","15_17",NA
+"Sicily","15_17",NA
+"Sardinia","15_17",NA
+"Italy","15_17",NA
+"Piedmont","18_44",NA
+"Aosta Valley","18_44",NA
+"Lombardy","18_44",NA
+"AP Bolzano","18_44",NA
+"AP Trento","18_44",NA
+"Veneto","18_44",NA
+"Friuli-Venezia Giulia","18_44",NA
+"Liguria","18_44",NA
+"Emilia-Romagna","18_44",NA
+"Tuscany","18_44",NA
+"Umbria","18_44",NA
+"Marche","18_44",NA
+"Lazio","18_44",NA
+"Abruzzo","18_44",NA
+"Molise","18_44",NA
+"Campania","18_44",NA
+"Apulia","18_44",NA
+"Basilicata","18_44",NA
+"Calabria","18_44",NA
+"Sicily","18_44",NA
+"Sardinia","18_44",NA
+"Italy","18_44",NA
+"Piedmont","45_64",NA
+"Aosta Valley","45_64",NA
+"Lombardy","45_64",NA
+"AP Bolzano","45_64",NA
+"AP Trento","45_64",NA
+"Veneto","45_64",NA
+"Friuli-Venezia Giulia","45_64",NA
+"Liguria","45_64",NA
+"Emilia-Romagna","45_64",NA
+"Tuscany","45_64",NA
+"Umbria","45_64",NA
+"Marche","45_64",NA
+"Lazio","45_64",NA
+"Abruzzo","45_64",NA
+"Molise","45_64",NA
+"Campania","45_64",NA
+"Apulia","45_64",NA
+"Basilicata","45_64",NA
+"Calabria","45_64",NA
+"Sicily","45_64",NA
+"Sardinia","45_64",NA
+"Italy","45_64",NA
+"Piedmont",">= 65",NA
+"Aosta Valley",">= 65",NA
+"Lombardy",">= 65",NA
+"AP Bolzano",">= 65",NA
+"AP Trento",">= 65",NA
+"Veneto",">= 65",NA
+"Friuli-Venezia Giulia",">= 65",NA
+"Liguria",">= 65",NA
+"Emilia-Romagna",">= 65",NA
+"Tuscany",">= 65",NA
+"Umbria",">= 65",NA
+"Marche",">= 65",NA
+"Lazio",">= 65",NA
+"Abruzzo",">= 65",NA
+"Molise",">= 65",NA
+"Campania",">= 65",NA
+"Apulia",">= 65",NA
+"Basilicata",">= 65",NA
+"Calabria",">= 65",NA
+"Sicily",">= 65",NA
+"Sardinia",">= 65",NA
+"Italy",">= 65",NA
+"Piedmont","Total",NA
+"Aosta Valley","Total",NA
+"Lombardy","Total",NA
+"AP Bolzano","Total",NA
+"AP Trento","Total",NA
+"Veneto","Total",NA
+"Friuli-Venezia Giulia","Total",NA
+"Liguria","Total",NA
+"Emilia-Romagna","Total",NA
+"Tuscany","Total",NA
+"Umbria","Total",NA
+"Marche","Total",NA
+"Lazio","Total",NA
+"Abruzzo","Total",NA
+"Molise","Total",NA
+"Campania","Total",NA
+"Apulia","Total",NA
+"Basilicata","Total",NA
+"Calabria","Total",NA
+"Sicily","Total",NA
+"Sardinia","Total",NA
+"Italy","Total",NA

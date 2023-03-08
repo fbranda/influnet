@@ -2,7 +2,7 @@
 title: "InfluNet"
 
 author:
-  - Francesco Branda^[UniCal, francesco.brada@unical.it]
+  - Francesco Branda^[UniCal, francesco.branda@unical.it]
   - Luca Cozzuto^[CRG, luca.cozzuto@crg.eu]
 
 

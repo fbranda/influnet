@@ -117,6 +117,25 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title, mypalette) {
 	return(pl1)
 }
 
+makePlotFlu2 <- function(ita_web, title, mypalette) {
+
+	merge.df<-reshapeData(ita_web)
+	
+	myweek<-c("46","47","48","49","50","51","52","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17")
+	pl1 <- ggplot(merge.df, aes(x=fct_inorder(factor(week)), y=Total_Samples)) +
+		  geom_bar(stat = "unique", width=1, fill = "#f6e8e8", alpha=0.7, colour = "gray") + 
+		  geom_line(aes(y = Positives, group = group_vir, color=group_vir)) +
+		  scale_color_manual(values=mypalette) + 
+		  ggtitle(title) +   theme(plot.title = element_text(hjust = 0.5)) +  
+ 		  xlab("week of the year") +
+ 		  scale_x_discrete(limits=factor(myweek)) +
+ 		  ylab("INFN-ISS cases")
+
+	return(pl1)
+}
+
+
+
 reshapeData<-function(ita_web) {
 
 	virol<-read.csv(ita_web, sep=",")

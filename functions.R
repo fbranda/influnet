@@ -89,7 +89,7 @@ makePlotCovid <- function(death_web, cases_web, ita_web, title, mypalette) {
 	
 	data_web<-getDataFromJH(death_web, cases_web)
 	cases_ita<-getSingleCountryData(data_web, "Italy", "JH")
-    cases_ita$year_week<-strftime(cases_ita$date, format = "%Y-%V")
+    cases_ita$year_week<-strftime(cases_ita$date, format = "%G-%V")
 
 	cases_ita.agg<-cases_ita %>%
 		  group_by(year_week) %>%

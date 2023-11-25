@@ -1,0 +1,13 @@
+"year_week","influenza_viruses","number_samples","number_sequenced","number_detections_influenza_viruses"
+"2022-46","FLU A",808,NA,21
+"2022-46","A",808,NA,1
+"2022-46","A(H3N2)",808,NA,2
+"2022-46","A(H1N1)pdm2009",808,NA,18
+"2022-46","FLU B",808,NA,0
+"2022-46","SARS-CoV-2",808,NA,67
+"2022-46","Rhinovirus",808,NA,152
+"2022-46","RSV",808,NA,34
+"2022-46","Parainfluenzali",808,NA,15
+"2022-46","Adenovirus",808,NA,28
+"2022-46","Generic coronavirus",808,NA,9
+"2022-46","Metapneumovirus",808,NA,3

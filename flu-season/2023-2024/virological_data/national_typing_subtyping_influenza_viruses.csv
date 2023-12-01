@@ -1,8 +1,8 @@
 "year_week","influenza_viruses","number_samples","number_sequenced","number_detections_influenza_viruses"
-"2022-46","FLU A",808,NA,21
+"2022-46","FLU A",808,NA,19
 "2022-46","A",808,NA,1
-"2022-46","A(H3N2)",808,NA,2
-"2022-46","A(H1N1)pdm2009",808,NA,18
+"2022-46","A(H3N2)",808,NA,3
+"2022-46","A(H1N1)pdm2009",808,NA,15
 "2022-46","FLU B",808,NA,0
 "2022-46","SARS-CoV-2",808,NA,67
 "2022-46","Rhinovirus",808,NA,152
@@ -10,4 +10,18 @@
 "2022-46","Parainfluenzali",808,NA,15
 "2022-46","Adenovirus",808,NA,28
 "2022-46","Generic coronavirus",808,NA,9
+"2022-46","Bocavirus",808,NA,0
 "2022-46","Metapneumovirus",808,NA,3
+"2022-47","FLU A",994,NA,39
+"2022-47","A",994,NA,9
+"2022-47","A(H3N2)",994,NA,3
+"2022-47","A(H1N1)pdm2009",994,NA,27
+"2022-47","FLU B",994,NA,2
+"2022-47","SARS-CoV-2",994,NA,129
+"2022-47","Rhinovirus",994,NA,126
+"2022-47","RSV",994,NA,33
+"2022-47","Parainfluenzali",994,NA,7
+"2022-47","Adenovirus",994,NA,10
+"2022-47","Generic coronavirus",994,NA,6
+"2022-47","Bocavirus",994,NA,1
+"2022-47","Metapneumovirus",994,NA,1

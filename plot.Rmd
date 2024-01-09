@@ -175,6 +175,18 @@ source("functions.R", local = knitr::knit_global())
 makePlotFlu2(ita_2022, "2022 / 2023", pal2)
 ```
 
+# Season 2023 / 2024
+
+```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}
+
+ita_2023 <- "flu-season/2023-2024/virological_data/national_typing_subtyping_influenza_viruses.csv"
+
+source("functions.R", local = knitr::knit_global())
+
+makePlotFlu2(ita_2023, "2023 / 2024", pal2)
+```
+
+
 # Influenza like illness 
 
 ```{r echo=FALSE, warning = FALSE, message=FALSE, fig.width=7}

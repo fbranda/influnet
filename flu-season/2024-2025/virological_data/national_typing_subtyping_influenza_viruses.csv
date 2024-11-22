@@ -1,0 +1,14 @@
+"flu_season","year_week","influenza_viruses","number_samples","number_sequenced","number_detections_influenza_viruses"
+"2024-2025","2024-46","FLU A",1038,NA,14
+"2024-2025","2024-46","A",1038,NA,4
+"2024-2025","2024-46","A(H3N2)",1038,NA,3
+"2024-2025","2024-46","A(H1N1)pdm2009",1038,NA,7
+"2024-2025","2024-46","FLU B",1038,NA,3
+"2024-2025","2024-46","SARS-CoV-2",1038,NA,29
+"2024-2025","2024-46","Rhinovirus",1038,NA,185
+"2024-2025","2024-46","RSV",1038,NA,15
+"2024-2025","2024-46","Parainfluenzali",1038,NA,25
+"2024-2025","2024-46","Adenovirus",1038,NA,37
+"2024-2025","2024-46","Generic coronavirus",1038,NA,20
+"2024-2025","2024-46","Bocavirus",1038,NA,3
+"2024-2025","2024-46","Metapneumovirus",1038,NA,3

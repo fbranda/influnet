@@ -126,7 +126,7 @@
 "2025-03","RSV",3023,NA,254
 "2025-03","Parainfluenzali",3023,NA,33
 "2025-03","Adenovirus",3023,NA,69
-"2025-03","Generic coronavirus",3023,NA,132
+"2025-03","Generic coronavirus",3023,NA,136
 "2025-03","Bocavirus",3023,NA,23
 "2025-03","Metapneumovirus",3023,NA,44
 "2025-04","FLU A",3879,NA,1151
@@ -139,7 +139,7 @@
 "2025-04","RSV",3879,NA,396
 "2025-04","Parainfluenzali",3879,NA,20
 "2025-04","Adenovirus",3879,NA,61
-"2025-04","Generic coronavirus",3879,NA,120
+"2025-04","Generic coronavirus",3879,NA,131
 "2025-04","Bocavirus",3879,NA,21
 "2025-04","Metapneumovirus",3879,NA,73
 "2025-05","FLU A",3471,NA,818
@@ -152,6 +152,6 @@
 "2025-05","RSV",3471,NA,336
 "2025-05","Parainfluenzali",3471,NA,9
 "2025-05","Adenovirus",3471,NA,44
-"2025-05","Generic coronavirus",3471,NA,NA
+"2025-05","Generic coronavirus",3471,NA,98
 "2025-05","Bocavirus",3471,NA,22
 "2025-05","Metapneumovirus",3471,NA,66

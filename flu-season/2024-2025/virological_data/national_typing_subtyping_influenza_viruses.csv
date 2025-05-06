@@ -31,10 +31,10 @@
 "2024-48","A(H1N1)pdm2009",1426,NA,33
 "2024-48","FLU B",1426,NA,12
 "2024-48","SARS-CoV-2",1426,NA,68
-"2024-48","Rhinovirus",1426,NA,312
+"2024-48","Rhinovirus",1426,NA,313
 "2024-48","RSV",1426,NA,64
 "2024-48","Parainfluenzali",1426,NA,45
-"2024-48","Adenovirus",1426,NA,67
+"2024-48","Adenovirus",1426,NA,68
 "2024-48","Generic coronavirus",1426,NA,45
 "2024-48","Bocavirus",1426,NA,9
 "2024-48","Metapneumovirus",1426,NA,11
@@ -90,9 +90,9 @@
 "2024-52","Generic coronavirus",810,NA,82
 "2024-52","Bocavirus",810,NA,15
 "2024-52","Metapneumovirus",810,NA,19
-"2025-01","FLU A",1628,NA,575
+"2025-01","FLU A",1628,NA,576
 "2025-01","A",1628,NA,68
-"2025-01","A(H3N2)",1628,NA,190
+"2025-01","A(H3N2)",1628,NA,191
 "2025-01","A(H1N1)pdm2009",1628,NA,317
 "2025-01","FLU B",1628,NA,125
 "2025-01","SARS-CoV-2",1628,NA,93
@@ -207,11 +207,11 @@
 "2025-09","Generic coronavirus",2801,NA,85
 "2025-09","Bocavirus",2801,NA,28
 "2025-09","Metapneumovirus",2801,NA,127
-"2025-10","FLU A",2577,NA,373
+"2025-10","FLU A",2577,NA,377
 "2025-10","A",2577,NA,48
-"2025-10","A(H3N2)",2577,NA,222
-"2025-10","A(H1N1)pdm2009",2577,NA,103
-"2025-10","FLU B",2577,NA,306
+"2025-10","A(H3N2)",2577,NA,225
+"2025-10","A(H1N1)pdm2009",2577,NA,104
+"2025-10","FLU B",2577,NA,312
 "2025-10","SARS-CoV-2",2577,NA,25
 "2025-10","Rhinovirus",2577,NA,241
 "2025-10","RSV",2577,NA,262
@@ -219,7 +219,7 @@
 "2025-10","Adenovirus",2577,NA,68
 "2025-10","Generic coronavirus",2577,NA,52
 "2025-10","Bocavirus",2577,NA,28
-"2025-10","Metapneumovirus",2577,NA,153
+"2025-10","Metapneumovirus",2577,NA,154
 "2025-11","FLU A",2536,NA,283
 "2025-11","A",2536,NA,26
 "2025-11","A(H3N2)",2536,NA,190
@@ -255,8 +255,8 @@
 "2025-13","Rhinovirus",1963,NA,252
 "2025-13","RSV",1963,NA,146
 "2025-13","Parainfluenzali",1963,NA,18
-"2025-13","Adenovirus",1963,NA,68
-"2025-13","Generic coronavirus",1963,NA,55
+"2025-13","Adenovirus",1963,NA,67
+"2025-13","Generic coronavirus",1963,NA,54
 "2025-13","Bocavirus",1963,NA,19
 "2025-13","Metapneumovirus",1963,NA,157
 "2025-14","FLU A",1915,NA,111
@@ -272,29 +272,42 @@
 "2025-14","Generic coronavirus",1915,NA,32
 "2025-14","Bocavirus",1915,NA,17
 "2025-14","Metapneumovirus",1915,NA,168
-"2025-15","FLU A",1573,NA,73
-"2025-15","A",1573,NA,7
+"2025-15","FLU A",1573,NA,74
+"2025-15","A",1573,NA,8
 "2025-15","A(H3N2)",1573,NA,52
 "2025-15","A(H1N1)pdm2009",1573,NA,14
 "2025-15","FLU B",1573,NA,48
 "2025-15","SARS-CoV-2",1573,NA,18
-"2025-15","Rhinovirus",1573,NA,268
+"2025-15","Rhinovirus",1573,NA,275
 "2025-15","RSV",1573,NA,67
-"2025-15","Parainfluenzali",1573,NA,18
-"2025-15","Adenovirus",1573,NA,52
-"2025-15","Generic coronavirus",1573,NA,36
+"2025-15","Parainfluenzali",1573,NA,19
+"2025-15","Adenovirus",1573,NA,53
+"2025-15","Generic coronavirus",1573,NA,37
 "2025-15","Bocavirus",1573,NA,9
-"2025-15","Metapneumovirus",1573,NA,150
-"2025-16","FLU A",1095,NA,42
-"2025-16","A",1095,NA,8
-"2025-16","A(H3N2)",1095,NA,26
-"2025-16","A(H1N1)pdm2009",1095,NA,8
-"2025-16","FLU B",1095,NA,21
-"2025-16","SARS-CoV-2",1095,NA,11
-"2025-16","Rhinovirus",1095,NA,150
-"2025-16","RSV",1095,NA,43
-"2025-16","Parainfluenzali",1095,NA,25
-"2025-16","Adenovirus",1095,NA,32
-"2025-16","Generic coronavirus",1095,NA,23
+"2025-15","Metapneumovirus",1573,NA,153
+"2025-16","FLU A",1095,NA,51
+"2025-16","A",1095,NA,3
+"2025-16","A(H3N2)",1095,NA,34
+"2025-16","A(H1N1)pdm2009",1095,NA,14
+"2025-16","FLU B",1095,NA,26
+"2025-16","SARS-CoV-2",1095,NA,14
+"2025-16","Rhinovirus",1095,NA,211
+"2025-16","RSV",1095,NA,52
+"2025-16","Parainfluenzali",1095,NA,38
+"2025-16","Adenovirus",1095,NA,43
+"2025-16","Generic coronavirus",1095,NA,28
 "2025-16","Bocavirus",1095,NA,8
-"2025-16","Metapneumovirus",1095,NA,76
+"2025-16","Metapneumovirus",1095,NA,93
+"2025-17","FLU A",924,NA,24
+"2025-17","A",924,NA,8
+"2025-17","A(H3N2)",924,NA,13
+"2025-17","A(H1N1)pdm2009",924,NA,3
+"2025-17","FLU B",924,NA,10
+"2025-17","SARS-CoV-2",924,NA,7
+"2025-17","Rhinovirus",924,NA,148
+"2025-17","RSV",924,NA,33
+"2025-17","Parainfluenzali",924,NA,21
+"2025-17","Adenovirus",924,NA,26
+"2025-17","Generic coronavirus",924,NA,18
+"2025-17","Bocavirus",924,NA,6
+"2025-17","Metapneumovirus",924,NA,68

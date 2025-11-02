@@ -1,0 +1,27 @@
+"year_week","influenza_viruses","number_samples","number_sequenced","number_detections_influenza_viruses"
+"2024-42","FLU A",NA,NA,20
+"2024-42","A(H1N1)pdm2009",NA,NA,9
+"2024-42","A(H3N2)",NA,NA,9
+"2024-42","A",NA,NA,2
+"2024-42","FLU B",NA,NA,2
+"2024-42","RSV",NA,NA,1
+"2024-42","SARS-CoV-2",NA,NA,95
+"2024-42","Metapneumovirus",NA,NA,0
+"2024-42","Rhinovirus",NA,NA,217
+"2024-42","Adenovirus",NA,NA,20
+"2024-42","Bocavirus",NA,NA,1
+"2024-42","Generic coronavirus",NA,NA,9
+"2024-42","Parainfluenzali",NA,NA,25
+"2024-43","FLU A",1123,NA,22
+"2024-43","A(H1N1)pdm2009",1123,NA,7
+"2024-43","A(H3N2)",1123,NA,5
+"2024-43","A",1123,NA,10
+"2024-43","FLU B",1123,NA,1
+"2024-43","RSV",1123,NA,7
+"2024-43","SARS-CoV-2",1123,NA,114
+"2024-43","Metapneumovirus",1123,NA,1
+"2024-43","Rhinovirus",1123,NA,237
+"2024-43","Adenovirus",1123,NA,42
+"2024-43","Bocavirus",1123,NA,1
+"2024-43","Generic coronavirus",1123,NA,9
+"2024-43","Parainfluenzali",1123,NA,48
